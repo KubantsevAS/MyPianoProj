@@ -1,67 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body {
-    background-color: seagreen;
-}
-    .container{
-    width: 50%;
-    margin: 10% auto;
-    display: flex;
-    justify-content: center;
-}
-    .key{
-    width: 12%;
-    padding-top: 200px;
-    padding-bottom: 50px;
-    text-align: center;
-    background-color: #FFF;
-    border: 5px solid gray;
-    font-size: 20px;
-    font-weight: bold;
-}
-    </style>
     <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Virtual Piano</title>
+    <title>My HTML Piano</title>
 </head>
 <body>
-<div class="container">
-    <kbd class="key">A</kbd>
-    <kbd class="key">S</kbd>
-    <kbd class="key">D</kbd>
-    <kbd class="key">F</kbd>
-    <kbd class="key">G</kbd>
-    <kbd class="key">H</kbd>
-    <kbd class="key">J</kbd>
-</div>
-<script>
-    document.addEventListener("keydown", function (event){
-    if (event.code == "KeyA"){
-        new Audio("audio/1.ogg").play();
-        console.log("The \'"+ event.key +"\' key is pressed");
-    } else if (event.code == "KeyS"){
-        new Audio("audio/2.ogg").play();
-        console.log("The \'"+ event.key +"\' key is pressed");
-    } else if (event.code == "KeyD"){
-        new Audio("audio/3.ogg").play();
-        console.log("The \'"+ event.key +"\' key is pressed");
-    } else if (event.code == "KeyF"){
-        new Audio("audio/4.ogg").play();
-        console.log("The \'"+ event.key +"\' key is pressed");
-    } else if (event.code == "KeyG"){
-        new Audio("audio/5.ogg").play();
-        console.log("The \'"+ event.key +"\' key is pressed");
-    } else if (event.code == "KeyH"){
-        new Audio("audio/6.ogg").play();
-        console.log("The \'"+ event.key +"\' key is pressed");
-    } else if (event.code == "KeyJ"){
-        new Audio("audio/7.ogg").play();
-        console.log("The \'"+ event.key +"\' key is pressed");
-    } else {
-        console.log("Warning")}
-});
-</script>
+    <div class="container">
+        <div class="white-keys">
+            <kbd id="A">A</kbd>
+            <kbd id="S">S</kbd>
+            <kbd id="D">D</kbd>
+            <kbd id="F">F</kbd>
+            <kbd id="G">G</kbd>
+            <kbd id="H">H</kbd>
+            <kbd id="J">J</kbd>
+        </div>
+        <div class="black-keys">
+            <kbd>W</kbd>
+            <kbd>E</kbd>
+            <kbd class="keyT">T</kbd>
+            <kbd>Y</kbd>
+            <kbd>U</kbd>
+        </div>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
